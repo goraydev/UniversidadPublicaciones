@@ -141,20 +141,30 @@ nav a {
 }
 section {
   position: absolute;
+  margin: 0 auto;
   top: 0;
-  height: 100vh;
+  height: 10vh;
   width: 0;
+  padding: 0px 30px 300px 100px;
   opacity: 0;
   transition: all ease-in 0.5s;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 section h1 {
-  color: #fff;
+  color: rgb(172, 33, 33);
   font-size: 50px;
   text-transform: uppercase;
   opacity: 0;
+}
+section img {
+  width: 40%;
+  margin: 200px 0px 0px 0px;
+}
+section p{
+  margin: 10px 0px 0px 0px;
 }
 section:target {
   opacity: 1;
@@ -187,4 +197,15 @@ section:target h1 {
   100% {
     opacity: 1;
   }
+}
+
+.btn {
+  background-color: #a0d2f3;
+  padding: 20px 20px 20px 20px;
+  margin: 10px 0px 10px 0px;
+  border-radius: 10px;
+}
+
+.btn:hover{
+  cursor: pointer;
 }
