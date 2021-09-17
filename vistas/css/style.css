@@ -1,10 +1,7 @@
 body {
   font: 13px/20px "Open Sans", Tahoma, Verdana, sans-serif;
   color: #a7a599;
-  background-image: url(../img/test.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 400px;
+  background-color: #181b1a;
 }
 .login {
   position: relative;
@@ -152,7 +149,6 @@ input[type="password"] {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;
   border: none;
   margin: 25px 50px;
   cursor: pointer;
