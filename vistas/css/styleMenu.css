@@ -173,11 +173,12 @@ nav a {
 }
 
 .container {
-  background-image: url(../img/escudo_unasam.png);
+  background-image: url(../img/working.svg);
   background-repeat: no-repeat;
   background-position: 50%;
   min-height: 100vh;
 }
+
 section {
   position: absolute;
   margin: 0 auto;

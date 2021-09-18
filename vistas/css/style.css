@@ -1,7 +1,7 @@
 body {
   font: 13px/20px "Open Sans", Tahoma, Verdana, sans-serif;
   color: #a7a599;
-  background-color: #181b1a;
+  background-color: #a0d2f3;
 }
 .login {
   position: relative;
@@ -22,7 +22,7 @@ body {
   font-weight: bold;
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
-  color: #fff;
+  color: #181b1a;
   text-align: center;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -93,7 +93,7 @@ body {
   margin: 0 50px;
 }
 ::-webkit-input-placeholder {
-  color: #ffffff;
+  color:#181b1a;
   font-family: "Open Sans";
 }
 .form input[type="text"],
@@ -112,7 +112,7 @@ input[type="password"] {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
-  color: rgb(255, 255, 255);
+  color: #181b1a;
   transition: color 0.3s ease-out;
 }
 .form input[type="text"] {
@@ -125,7 +125,7 @@ input[type="password"] {
   position: absolute;
   height: 44px;
   width: 44px;
-  color: #f7f3eb;
+  color: #181b1a;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -143,7 +143,7 @@ input[type="password"] {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
   padding: 12px 0;
-  color: #fff;
+  color: #181b1a;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
