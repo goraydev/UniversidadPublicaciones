@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styleMenu.css">
-    <link rel="shortcut icon" href="../img/escudo_unasam.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/escudo_unasamPes.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -62,10 +62,67 @@
             </div>
         </section>
         <section id="second" class="parent">
-            <h1>Second</h1>
+            <h2>Mis publicaciones</h2>
+            <div class="div1">
+                <table>
+                    <thead>
+                        <caption>Resultados generales</caption>
+                    </thead>
+                    <tbody>
+                        <tr class="headTable">
+                            <td><b>Publicación</b></td>
+                            <td><b>Tipo</b></td>
+                            <td><b>Resultado</b></td>
+                            <td><b>Observación</b></td>
+                        </tr>
+                        <tr>
+                            <td>Algoritmos</td>
+                            <td>libro</td>
+                            <td><mark class="aceptado">aceptado</mark></td>
+                            <td> <button id="btn">
+                                    descargar
+                                    <div class="loading-1 loading"></div>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>La magia de css</td>
+                            <td>Ensayo</td>
+                            <td><mark class="noaceptado">no aceptado</mark></td>
+                            <td>
+                                <button id="btn">
+                                    descargar
+                                    <div class="loading-1 loading"></div>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Introducción a Cloud computing</td>
+                            <td>Revista</td>
+                            <td><mark class="revision">revisión</mark></td>
+                            <td><button id="btn">
+                                    --
+
+                                </button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
         <section id="third" class="parent">
-            <h1>Third</h1>
+            <h2>Escoja una opción</h2>
+            <div class="div1">
+                <ul class="opciones">
+                    <li><a href="">Ranking general</a></li>
+                    <li><a href="">De mis publicaciones</a></li>
+                </ul>
+            </div>
+            <div class="div2">
+                <h1>first</h1>
+            </div>
+            <div class="div2">
+                <h1>second</h1>
+            </div>
         </section>
         <section id="fourth" class="parent">
             <h1>Fourth</h1>
@@ -75,6 +132,7 @@
         </section>
     </div>
 
+    <script src="../js/animacionBoton.js"></script>
 
 
 </body>
