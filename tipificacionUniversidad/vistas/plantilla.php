@@ -21,7 +21,6 @@ if (isset($_SESSION["usuario"]) && isset($_SESSION["tipo"])) {
     <link rel="shortcut icon" href="vistas/img/plantilla/escudo_unasamPes.ico" type="image/x-icon">
     <link rel="stylesheet" href="vistas/css/login.css">
     <title>Tipificación UNASAM</title>
-    <!-- Vinculos CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
     <!-- Font Awesome -->
@@ -29,9 +28,27 @@ if (isset($_SESSION["usuario"]) && isset($_SESSION["tipo"])) {
 
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!-- bootstrap datepicker -->
+    <link rel="stylesheet" href="css/plugins/bootstrap-datepicker.standalone.min.css">
+
+    <!-- jdSlider -->
+    <link rel="stylesheet" href="css/plugins/jquery.jdSlider.css">
+
+    <!-- Pano -->
+    <link rel="stylesheet" href="css/plugins/jquery.pano.css">
+
+    <!-- fullCalendar -->
+    <link rel="stylesheet" href="css/plugins/fullcalendar.min.css">
 
     <!-- Theme style AdmninLTE -->
     <link rel="stylesheet" href="vistas/css/plugins/adminlte.min.css">
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="vistas/css/plugins/responsive.bootstrap.min.css">
+    <link rel="stylesheet" href="vistas/css/plugins/datatables.css">
+    <link rel="stylesheet" href="vistas/css/plugins/datatables.min.css">
+
+
 
     <!-- Vinculos de JS -->
     <!-- jQuery library -->
@@ -41,10 +58,43 @@ if (isset($_SESSION["usuario"]) && isset($_SESSION["tipo"])) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <!-- bootstrap datepicker -->
+    <!-- https://bootstrap-datepicker.readthedocs.io/en/latest/ -->
+    <script src="js/plugins/bootstrap-datepicker.min.js"></script>
+
+    <!-- https://easings.net/es# -->
+    <script src="js/plugins/jquery.easing.js"></script>
+
+    <!-- https://markgoodyear.com/labs/scrollup/ -->
+    <script src="js/plugins/scrollUP.js"></script>
+
+    <!-- jdSlider -->
+    <!-- https://www.jqueryscript.net/slider/Carousel-Slideshow-jdSlider.html -->
+    <script src="js/plugins/jquery.jdSlider-latest.js"></script>
+
+    <!-- Pano -->
+    <!-- https://www.jqueryscript.net/other/360-Degree-Panoramic-Image-Viewer-with-jQuery-Pano.html -->
+    <script src="js/plugins/jquery.pano.js"></script>
+
+    <!-- https://momentjs.com/ -->
+    <script src="js/plugins/moment.js"></script>
 
     <!-- AdminLTE App -->
     <script src="vistas/js/plugins/adminlte.min.js"></script>
+
+    <!-- SWEET ALERT 2 -->
+    <!-- https://sweetalert2.github.io/ -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- Animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- DataTables -->
+    <script src="vistas/js/plugins/dataTables.responsive.min.js"></script>
+    <script src="vistas/js/plugins/responsive.bootstrap.min.js"></script>
+    <script src="vistas/js/plugins/datatables.js"></script>
+    <script src="vistas/js/plugins/datatables.min.js"></script>
 </head>
 
 <!-- Para que los usuarios ingresen al sistema -->
@@ -86,6 +136,7 @@ if (isset($_SESSION["usuario"]) && isset($_SESSION["tipo"])) {
             include "paginas/modulos/footer.php";
             ?>
         </div>
+        <script src="vistas/js/verresultados.js"></script>
     </body>
 <?php endif ?>
 

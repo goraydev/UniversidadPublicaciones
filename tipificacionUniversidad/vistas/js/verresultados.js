@@ -1,0 +1,5 @@
+$(".tablaResultados").DataTable({
+});
+
+$(".tablaSubirArchivos").DataTable({
+});
