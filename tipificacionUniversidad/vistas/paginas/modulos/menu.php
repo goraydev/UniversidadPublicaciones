@@ -1,21 +1,4 @@
-<?php
-//asignar item de nav segun tipo de usuario
-switch ($_SESSION["tipo"]) {
-    case 'docente':
-        $ver=12;
-        break;
-    case 'decano':
 
-        break;
-    case 'mTipi':
-
-        break;
-
-    default:
-        # code...
-        break;
-}
-?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Logo -->
     <a href="../../" class="brand-link">
