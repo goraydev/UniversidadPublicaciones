@@ -1,3 +1,15 @@
+<?php
+    //redireccionamiento al login
+    session_start();
+    $_SESSION["usuario"]="Juan Luna";
+    $_SESSION["tipo"]="docente";
+    if (isset($_SESSION["usuario"]) && isset($_SESSION["tipo"])) {
+    
+    } else {
+        header("Location: ../");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,11 +67,9 @@
 
                 include "paginas/" . $_GET["pagina"] . ".php";
             } else {
-
                 include "paginas/error404.php";
             }
         } else {
-
             include "paginas/inicio.php";
         }
         include "paginas/modulos/footer.php";
