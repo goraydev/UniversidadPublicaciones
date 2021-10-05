@@ -1,13 +1,15 @@
 <?php
-    //redireccionamiento al login
-    session_start();
-    $_SESSION["usuario"]="Juan Luna";
-    $_SESSION["tipo"]="docente";
-    if (isset($_SESSION["usuario"]) && isset($_SESSION["tipo"])) {
-    
-    } else {
-        header("Location: ../");
-    }
+//redireccionamiento al login
+session_start();
+
+$rutaBackend = ControladorRuta::ctrRutaBackend();
+
+$_SESSION["usuario"] = "Juan Luna";
+$_SESSION["tipo"] = "docente";
+if (isset($_SESSION["usuario"]) && isset($_SESSION["tipo"])) {
+} else {
+    header("Location: ../");
+}
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +18,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="../vistas/img/plantilla/escudo_unasamPes.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="vistas/img/plantilla/escudo_unasamPes.ico" type="image/x-icon">
+    <link rel="stylesheet" href="vistas/css/login.css">
     <title>Tipificación UNASAM</title>
     <!-- Vinculos CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -44,37 +47,46 @@
     <script src="vistas/js/plugins/adminlte.min.js"></script>
 </head>
 
-<body class="hold-transition sidebar-mini sidebar-collapse">
-    <div class="wrapper">
-        <?php
-        include "paginas/modulos/header.php";
-        include "paginas/modulos/menu.php";
+<!-- Para que los usuarios ingresen al sistema -->
+<?php if (!isset($_SESSION["validarSesionBackend"])) :
+    include "paginas/login.php";
+?>
 
-        /* Navegación de páginas */
-        if (isset($_GET["pagina"])) {
+<?php else : ?>
 
-            if (
-                $_GET["pagina"] == "inicio" ||
-                $_GET["pagina"] == "escogermiembros" ||
-                $_GET["pagina"] == "meritos" ||
-                $_GET["pagina"] == "revisararchivos" ||
-                $_GET["pagina"] == "subirarchivos" ||
-                $_GET["pagina"] == "verresultados" ||
-                $_GET["pagina"] == "rgeneral" ||
-                $_GET["pagina"] == "rmias"
+    <body class="hold-transition sidebar-mini sidebar-collapse">
+        <div class="wrapper">
+            <?php
+            include "paginas/modulos/header.php";
+            include "paginas/modulos/menu.php";
 
-            ) {
+            /* Navegación de páginas */
+            if (isset($_GET["pagina"])) {
 
-                include "paginas/" . $_GET["pagina"] . ".php";
+                if (
+                    $_GET["pagina"] == "inicio" ||
+                    $_GET["pagina"] == "escogermiembros" ||
+                    $_GET["pagina"] == "meritos" ||
+                    $_GET["pagina"] == "revisararchivos" ||
+                    $_GET["pagina"] == "subirarchivos" ||
+                    $_GET["pagina"] == "verresultados" ||
+                    $_GET["pagina"] == "rgeneral" ||
+                    $_GET["pagina"] == "rmias" ||
+                    $_GET["pagina"] == "salir"
+
+                ) {
+
+                    include "paginas/" . $_GET["pagina"] . ".php";
+                } else {
+                    include "paginas/error404.php";
+                }
             } else {
-                include "paginas/error404.php";
+                include "paginas/inicio.php";
             }
-        } else {
-            include "paginas/inicio.php";
-        }
-        include "paginas/modulos/footer.php";
-        ?>
-    </div>
-</body>
+            include "paginas/modulos/footer.php";
+            ?>
+        </div>
+    </body>
+<?php endif ?>
 
 </html>
