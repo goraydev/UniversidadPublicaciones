@@ -24,56 +24,45 @@
                     <!-- Default box -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Resultados</h3>
-
-                            <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                    <i class="fas fa-minus"></i>
-                                </button>
-                                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
+                            <h3 class="card-title">Mis archivos</h3>
                         </div>
                         <div class="card-body">
-                            <div class="input-group mb-3">
-                                <span class="input-group-text " id="basic-addon1"><i class="fas fa-search"></i></span>
-                                <input type="text" class="form-control col-6" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                            </div>
-                            <table class="table table-striped">
+                            <table class="table table-bordered table-striped dt-responsive tablaResultados" width="100%" id="TablaResultados">
                                 <thead>
                                     <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">First</th>
-                                        <th scope="col">Last</th>
-                                        <th scope="col">Handle</th>
-                                        <th scope="col">Last</th>
-                                        <th scope="col">Handle</th>
+                                        <th>Publicación</th>
+                                        <th>Resultado</th>
+                                        <th>Año</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="myTable">
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td>Las matemáticas son tus amigas</td>
+                                        <td>98</td>
+                                        <td>2019</td>
+
                                     </tr>
                                     <tr>
-                                        <th scope="row">3</th>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                        <td>Thornton</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td>¿Qué son las computadoras cuánticas?</td>
+                                        <td>88</td>
+                                        <td>2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Estadística para todos</td>
+                                        <td>85</td>
+                                        <td>2020</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Los algoritmos</td>
+                                        <td>78</td>
+                                        <td>2021</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer">
-                            Footer
+                            Este ranking esta generado por todas sus publicaciones aprobadas
                         </div>
                         <!-- /.card-footer-->
                     </div>

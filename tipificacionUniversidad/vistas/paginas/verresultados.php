@@ -1,20 +1,4 @@
 <div class="content-wrapper" style="min-height: 1761.5px;">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1>Ver resultados</h1>
-                </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="inicio">Inicio</a></li>
-                        <li class="breadcrumb-item active">Ver resultados</li>
-                    </ol>
-                </div>
-            </div>
-        </div><!-- /.container-fluid -->
-    </section>
 
     <!-- Main content -->
     <section class="content">
@@ -24,63 +8,43 @@
                     <!-- Default box -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Resultados</h3>
-                            <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                    <i class="fas fa-minus"></i>
-                                </button>
-                                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
+                            <h3>Ver resultados</h3>
                         </div>
                         <div class="card-body">
-                            <div class="input-group mb-3">
-                                <span class="input-group-text " id="basic-addon1"><i class="fas fa-search"></i></span>
-                                <input type="text" class="form-control col-6" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                            </div>
-                            <table class="table table-striped">
+                            <table class="table table-bordered table-striped dt-responsive tablaResultados" width="100%" id="TablaResultados">
                                 <thead>
                                     <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">First</th>
-                                        <th scope="col">Last</th>
-                                        <th scope="col">Handle</th>
-                                        <th scope="col">Estado</th>
-                                        <th scope="col">Descargar</th>
+                                        <th>Publicación</th>
+                                        <th>Tipo</th>
+                                        <th>Resultados</th>
+                                        <th>Observación</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="myTable">
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>
-                                            <label for="" class="px-1 rounded bg-success">Aceptado</label>
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn bg-success"><i class="fas fa-download"></i></a>
-                                        </td>
+                                        <td>Los algoritmos</td>
+                                        <td>Ensayo</td>
+                                        <td><button class="btn btn-success btn-sm">aprobado</button></td>
+                                        <td><button class="btn btn-warning btn-sm">Descargar</button></td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">3</th>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                        <td>Thornton</td>
-                                        <td>
-                                            <label for="" class="px-1 rounded bg-danger">Rechazado</label>
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn bg-success"><i class="fas fa-download"></i></a>
-                                        </td>
+                                        <td>SQL vs NOSQL</td>
+                                        <td>Libro</td>
+                                        <td><button class="btn btn-danger btn btn-sm">desaprobado</button></td>
+                                        <td><button class="btn btn-warning btn-sm">Descargar</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aprende calculo I</td>
+                                        <td>Libro</td>
+                                        <td><button class="btn btn-secondary btn-sm">en revisión</button></td>
+                                        <td><button class="btn btn-warning btn-sm">Descargar</button></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer">
-                            Footer
+                            Los resultados no tienen ningún orden en específico
                         </div>
                         <!-- /.card-footer-->
                     </div>

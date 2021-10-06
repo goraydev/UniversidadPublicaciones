@@ -24,69 +24,122 @@
                     <!-- Default box -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Subir Publicación</h3>
-                            <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                    <i class="fas fa-minus"></i>
-                                </button>
-                                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#subirArchivo">
+                                Nueva publicación
+                            </button>
                         </div>
-                        <div class="row g-3">
-                            <div class="card-body">
-                                <form class="row ">
-                                    <div class="col-12">
-                                        <label for="inputEmail4" class="form-label">Título</label>
-                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Escriba el título">
-                                    </div>
-                                    <div class="col-md-2 my-3">
-                                        <label for="inputAddress" class="form-label">N° Páginas</label>
-                                        <input type="number" class="form-control" id="inputAddress" placeholder="1234">
-                                    </div>
-                                    <div class="col-md-4 my-3">
-                                        <label for="inputState" class="form-label">Observación</label>
-                                        <select id="inputState" class="form-select">
-                                            <option selected>Choose...</option>
-                                            <option>...</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-3 my-3">
-                                        <label for="inputState" class="form-label">Categoria</label>
-                                        <select id="inputState" class="form-select">
-                                            <option selected>Choose...</option>
-                                            <option>...</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-3 my-3">
-                                        <label for="inputState" class="form-label">Creación</label>
-                                        <select id="inputState" class="form-select">
-                                            <option selected>Choose...</option>
-                                            <option>...</option>
-                                        </select>
-                                    </div>
-                                    <div class="input-group">
-                                        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                                        <button class="btn btn-outline-secondary bg-info" type="button" id="inputGroupFileAddon04">Previsualizar</button>
-                                    </div>
-                                    <div class="col-12 my-3">
-                                        <button type="submit" class="btn btn-primary">Subir Publicación</button>
-                                    </div>
-                                </form>
+                        <div class="card-body">
+                            <table class="table table-bordered table-striped dt-responsive tablaSubirArchivos" width="100%" id="TablaSubirArchivos">
+                                <thead>
+                                    <tr>
+                                        <th>Publicación</th>
+                                        <th>Tipo</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="myTable">
+                                    <tr>
+                                        <td>Los algoritmos</td>
+                                        <td>Ensayo</td>
+                                        <td><button class="btn btn-primary btn-sm">editar</button>
+                                            <button class="btn btn-danger btn-sm">eliminar</button>
+                                        </td>
 
-                            </div>
-                            <!-- /.card-body -->
-                            <div class="card-footer">
-                                Footer
-                            </div>
-                            <!-- /.card-footer-->
+                                    </tr>
+                                    <tr>
+                                        <td>SQL vs NOSQL</td>
+                                        <td>Libro</td>
+                                        <td><button class="btn btn-primary btn-sm">editar</button>
+                                            <button class="btn btn-danger btn-sm">eliminar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aprende calculo I</td>
+                                        <td>Libro</td>
+                                        <td><button class="btn btn-primary btn-sm">editar</button>
+                                            <button class="btn btn-danger btn-sm">eliminar</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <!-- /.card -->
-
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            Los calificación de sus publicaciones lo puede ver en la sección de ver resultados
+                        </div>
+                        <!-- /.card-footer-->
                     </div>
+                    <!-- /.card -->
                 </div>
             </div>
+        </div>
     </section>
     <!-- /.content -->
+</div>
+
+<!-- Venta modal para subir un nuevo archivo -->
+<div class="modal fade" id="subirArchivo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="" method="POST">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="staticBackdropLabel">Subir nuevo archivo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Input archivo -->
+                    <div class="input-group mb-4">
+
+                        <div class="input-group-append input-group-text">
+                            <span class="fas fa-file-pdf"></span>
+                        </div>
+
+                        <input type="text" class="form-control" name="registroPublicacion" placeholder="Ingresa el nombre de la publicación" required>
+
+                    </div>
+                    <div class="input-group mb-3">
+
+                        <div class="input-group-append input-group-text">
+
+                            <span class="fas fa-book"></span>
+
+
+                        </div>
+
+                        <select class="form-control" name="registroTipo" required>
+
+                            <option value="" disabled selected>Seleccione tipo</option>
+
+                            <option value="">Libro</option>
+
+                            <option value="">Ensayo</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <div class="form-group my-2">
+
+                            <div class="btn btn-default btn-file">
+
+                                <i class="fas fa-paperclip"></i> Adjuntar archivo
+
+                                <input type="file" name="subirArchivo" accept=".pdf">
+
+                            </div>
+
+                            <p class="help-block small">Peso Max. 10MB | Formato: PDF</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
