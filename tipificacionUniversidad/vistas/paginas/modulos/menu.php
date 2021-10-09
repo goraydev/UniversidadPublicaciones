@@ -10,7 +10,7 @@
         <!-- user-->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="info">
-                <a href="#" class="d-block"></a>
+                <a href="#" class="d-block">Hola <?php echo $admin["usuario"] ?></a>
             </div>
         </div>
 
@@ -28,66 +28,72 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a href="subirarchivos" class="nav-link">
-                        <i class="nav-icon fas fa-cloud-upload-alt"></i>
-                        <p>
-                            Subir archivos
-                        </p>
-                    </a>
-                </li>
+                <?php if ($admin["fk_rol"] == 3) : ?>
+                    <li class="nav-item">
+                        <a href="subirarchivos" class="nav-link">
+                            <i class="nav-icon fas fa-cloud-upload-alt"></i>
+                            <p>
+                                Subir archivos
+                            </p>
+                        </a>
+                    </li>
 
 
-                <li class="nav-item menu-link">
-                    <a href="verresultados" class="nav-link">
-                        <i class="nav-icon fas fa-eye"></i>
-                        <p>
-                            Ver resultados
-                        </p>
-                    </a>
-                </li>
+                    <li class="nav-item menu-link">
+                        <a href="verresultados" class="nav-link">
+                            <i class="nav-icon fas fa-eye"></i>
+                            <p>
+                                Ver resultados
+                            </p>
+                        </a>
+                    </li>
 
-                <li class="nav-item">
-                    <a href="" class="nav-link">
-                        <i class="nav-icon fas fa-star"></i>
-                        <p>
-                            Méritos de publicación
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="rgeneral" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Ranking General</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="rmias" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>De mis publicaciones</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">
+                            <i class="nav-icon fas fa-star"></i>
+                            <p>
+                                Méritos de publicación
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="rgeneral" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Ranking General</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="rmias" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>De mis publicaciones</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                <?php endif ?>
 
-                <li class="nav-item">
-                    <a href="escogermiembros" class="nav-link">
-                        <i class="nav-icon fas fa-users"></i>
-                        <p>
-                            Escoger miembros
-                        </p>
-                    </a>
-                </li>
+                <?php if ($admin["fk_rol"] == 1) : ?>
+                    <li class="nav-item">
+                        <a href="escogermiembros" class="nav-link">
+                            <i class="nav-icon fas fa-users"></i>
+                            <p>
+                                Escoger miembros
+                            </p>
+                        </a>
+                    </li>
+                <?php endif ?>
 
-                <li class="nav-item">
-                    <a href="revisararchivos" class="nav-link">
-                        <i class="nav-icon fas fa-folder-open"></i>
-                        <p>
-                            Archivos a revisar
-                        </p>
-                    </a>
-                </li>
+                <?php if ($admin["fk_rol"] == 2) : ?>
+                    <li class="nav-item">
+                        <a href="revisararchivos" class="nav-link">
+                            <i class="nav-icon fas fa-folder-open"></i>
+                            <p>
+                                Archivos a revisar
+                            </p>
+                        </a>
+                    </li>
+                <?php endif ?>
 
             </ul>
         </nav>
