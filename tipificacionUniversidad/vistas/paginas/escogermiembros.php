@@ -24,23 +24,70 @@
                     <!-- Default box -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Title</h3>
-
-                            <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                    <i class="fas fa-minus"></i>
-                                </button>
-                                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
+                            <h3 class="card-title">Docentes</h3>
                         </div>
                         <div class="card-body">
-                            Start creating your amazing application!
+                            <table class="table table-bordered table-striped dt-responsive tablaResultados" width="100%" id="TablaResultados">
+                                <thead>
+                                    <tr>
+                                        <th>Docente</th>
+                                        <th>Estado</th>
+                                        <th>Cargo</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="myTable">
+                                    <tr>
+                                        <td>Mario Ninaquispe</td>
+                                        <td><button class="btn btn-success">Activo</button></td>
+                                        <td><button class="btn btn-warning">Presidente</button></td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-primary"><i class="fas fa-edit"></i></button>
+                                                <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>Robby Lugo Vargas</td>
+                                        <td><button class="btn btn-success">Activo</button></td>
+                                        <td><button class="btn btn-warning">Secretario</button></td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-primary"><i class="fas fa-edit"></i></button>
+                                                <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Coral villanueva</td>
+                                        <td><button class="btn btn-success">Activo</button></td>
+                                        <td><button class="btn btn-warning">Vocal</button></td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-primary"><i class="fas fa-edit"></i></button>
+                                                <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Miguel Silva Zapata</td>
+                                        <td><button class="btn btn-secondary">Desactivado</button></td>
+                                        <td><button class="btn btn-dark">Ninguno</button></td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-primary"><i class="fas fa-edit"></i></button>
+                                                <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer">
-                            Footer
+                            Nota: Los miembros de tipificación escogidos ahora serán retirados de su cargo automáticamente pasado un año
                         </div>
                         <!-- /.card-footer-->
                     </div>
