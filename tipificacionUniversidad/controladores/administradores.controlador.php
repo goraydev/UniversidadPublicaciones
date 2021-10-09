@@ -33,4 +33,14 @@ class ControladorAdministradores
             }
         }
     }
+    /* Para mostrar los datos del que ingreso al sistema */
+    static public function ctrMostrarAdministradores($item, $valor)
+    {
+
+        $tabla = "cuentas";
+
+        $respuesta = ModeloAdministradores::mdlMostrarAdministradores($tabla, $item, $valor);
+
+        return $respuesta;
+    }
 }

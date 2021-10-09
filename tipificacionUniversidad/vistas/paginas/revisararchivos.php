@@ -1,3 +1,10 @@
+<!-- Para evitar el ingreso a esta página mediante la URL -->
+<?php
+if ($admin["fk_rol"] != 2) {
+    echo '<script> window.location = "inicio" </script>';
+    return;
+}
+?>
 <div class="content-wrapper" style="min-height: 1761.5px;">
     <!-- Content Header (Page header) -->
     <section class="content-header">

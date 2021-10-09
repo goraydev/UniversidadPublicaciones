@@ -4,11 +4,8 @@ session_start();
 
 $rutaBackend = ControladorRuta::ctrRutaBackend();
 
-$_SESSION["usuario"] = "Juan Luna";
-$_SESSION["tipo"] = "docente";
-if (isset($_SESSION["usuario"]) && isset($_SESSION["tipo"])) {
-} else {
-    header("Location: ../");
+if (isset($_SESSION["idBackend"])) {
+    $admin = ControladorAdministradores::ctrMostrarAdministradores("idcuenta", $_SESSION["idBackend"]);
 }
 ?>
 
