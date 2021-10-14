@@ -75,7 +75,7 @@ if ($admin["fk_rol"] != 3) {
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer">
-                            Los calificación de sus publicaciones lo puede ver en la sección de ver resultados
+                            La calificación de sus publicaciones lo puede ver en la sección de ver resultados
                         </div>
                         <!-- /.card-footer-->
                     </div>
