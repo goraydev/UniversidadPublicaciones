@@ -17,8 +17,7 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+
                 <li class="nav-item menu-open">
                     <a href="inicio" class="nav-link active">
                         <i class="nav-icon fas fa-home"></i>
@@ -27,6 +26,50 @@
                         </p>
                     </a>
                 </li>
+
+                <?php if ($admin["fk_rol"] == 4) : ?>
+                    <li class="nav-item">
+                        <a href="roles" class="nav-link">
+                            <i class="nav-icon fas fa-users-cog"></i>
+                            <p>
+                                Roles
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="directorEscuela" class="nav-link">
+                            <i class="nav-icon fas fa-user"></i>
+                            <p>
+                                Director de escuela
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="docentes" class="nav-link">
+                            <i class="nav-icon fas fa-users"></i>
+                            <p>
+                                Docentes
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="escuelas" class="nav-link">
+                            <i class="nav-icon fas fa-university"></i>
+                            <p>
+                                Escuelas
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="categorias" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p>
+                                Categorias
+                            </p>
+                        </a>
+                    </li>
+                <?php endif ?>
 
                 <?php if ($admin["fk_rol"] == 3) : ?>
                     <li class="nav-item">
@@ -84,7 +127,7 @@
                     </li>
                 <?php endif ?>
 
-                <?php if ($admin["fk_rol"] == 2) : ?>
+                <?php if (($admin["fk_rol"] == 5) || ($admin["fk_rol"] == 6) || ($admin["fk_rol"] == 7)) : ?>
                     <li class="nav-item">
                         <a href="revisararchivos" class="nav-link">
                             <i class="nav-icon fas fa-folder-open"></i>

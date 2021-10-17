@@ -119,6 +119,11 @@ if (isset($_SESSION["idBackend"])) {
                     $_GET["pagina"] == "verresultados" ||
                     $_GET["pagina"] == "rgeneral" ||
                     $_GET["pagina"] == "rmias" ||
+                    $_GET["pagina"] == "directorEscuela" ||
+                    $_GET["pagina"] == "docentes" ||
+                    $_GET["pagina"] == "escuelas" ||
+                    $_GET["pagina"] == "roles" ||
+                    $_GET["pagina"] == "categorias" ||
                     $_GET["pagina"] == "salir"
 
                 ) {
