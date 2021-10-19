@@ -3,7 +3,7 @@
 
 require "conexion.php";
 $idDocente =  $docente["coddocent"];
-$sql = "SELECT * FROM v_archivos WHERE ";
+$sql = "SELECT * FROM v_archivos WHERE coddocent = '$idDocente'";
 $resultado = $mysqli->query($sql);
 
 if ($admin["fk_rol"] != 3) {

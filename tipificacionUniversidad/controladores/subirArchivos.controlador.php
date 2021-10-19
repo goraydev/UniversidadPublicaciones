@@ -5,7 +5,7 @@ class ControladorSubirArchivos
     static public function ctrMostrarSubirArchivos($item, $valor)
     {
 
-        $tabla = "archhivo";
+        $tabla = "archivo";
 
         $respuesta = ModeloSubirArchivos::mdlMostrarSubirArchivos($tabla, $item, $valor);
 
@@ -35,7 +35,6 @@ class ControladorSubirArchivos
                     /*=============================================
 					DE ACUERDO AL TIPO DE ARCHIVO APLICAMOS LAS FUNCIONES POR DEFECTO DE PHP
 					=============================================*/
-
                     if ($_FILES["subirArchivo"]["type"] == "application/pdf") {
                         $aleatorio = mt_rand(100, 999);
                         $ruta = $directorio . "/" . $aleatorio . ".pdf";
