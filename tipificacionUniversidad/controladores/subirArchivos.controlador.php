@@ -30,14 +30,18 @@ class ControladorSubirArchivos
 					CREAMOS EL DIRECTORIO DONDE VAMOS A GUARDAR EL ARCHIVO
 					=============================================*/
 
-                    $directorio = "vistas/documentos/archivos";
+                    $directorio = "archivos/";
 
                     /*=============================================
 					DE ACUERDO AL TIPO DE ARCHIVO APLICAMOS LAS FUNCIONES POR DEFECTO DE PHP
 					=============================================*/
                     if ($_FILES["subirArchivo"]["type"] == "application/pdf") {
                         $aleatorio = mt_rand(100, 999);
-                        $ruta = $directorio . "/" . $aleatorio . ".pdf";
+                        // $ruta = $directorio. $aleatorio . ".pdf";
+                        $ruta = $directorio . basename($_FILES['subirArchivo']['name']);
+                        if (move_uploaded_file($_FILES['subirArchivo']['tmp_name'], $ruta)) {
+                            // echo "<script>alert('Se cargo el archivo');</script>";
+                        } 
                     } else {
 
                         echo '<script>

@@ -1,9 +1,9 @@
 <!-- Para evitar el ingreso a esta página mediante la URL -->
 <?php
-if (($admin["fk_rol"] != 1) || ($admin["fk_rol"] != 3) || ($admin["fk_rol"] != 4)) {
+/* if (($admin["fk_rol"] != 1) || ($admin["fk_rol"] != 3) || ($admin["fk_rol"] != 4)) {
     echo '<script> window.location = "inicio" </script>';
     return;
-}
+} */
 ?>
 <div class="content-wrapper" style="min-height: 1761.5px;">
     <!-- Content Header (Page header) -->
@@ -52,20 +52,8 @@ if (($admin["fk_rol"] != 1) || ($admin["fk_rol"] != 3) || ($admin["fk_rol"] != 4
                                         <td><button class="btn btn-success">Descargar archivo</button></td>
                                         <td><button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#subirObservacionM">Calificar</button></td>
                                         <td>Falta calificación</td>
-                                        <td><button class="btn btn-warning">
-                                                <div class="form-group">
-
-                                                    <div class="form-group my-2">
-
-                                                        <div class="btn btn-default btn-file">
-
-                                                            <i class="fas fa-paperclip"></i> Adjuntar archivo
-
-                                                            <input type="file" name="subirArchivo" accept=".pdf">
-
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        <td><button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#crearObservacion">
+                                                Nueva observación
                                             </button>
                                         </td>
 
@@ -77,20 +65,8 @@ if (($admin["fk_rol"] != 1) || ($admin["fk_rol"] != 3) || ($admin["fk_rol"] != 4
                                         <td><button class="btn btn-success">Descargar archivo</button></td>
                                         <td><button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#subirObservacionL">Calificar</button></td>
                                         <td>Falta calificación</td>
-                                        <td><button class="btn btn-warning">
-                                                <div class="form-group">
-
-                                                    <div class="form-group my-2">
-
-                                                        <div class="btn btn-default btn-file">
-
-                                                            <i class="fas fa-paperclip"></i> Adjuntar archivo
-
-                                                            <input type="file" name="subirArchivo" accept=".pdf">
-
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        <td> <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#crearObservacion">
+                                                Nueva observación
                                             </button>
                                         </td>
                                     </tr>
@@ -100,20 +76,9 @@ if (($admin["fk_rol"] != 1) || ($admin["fk_rol"] != 3) || ($admin["fk_rol"] != 4
                                         <td><button class="btn btn-success">Descargar archivo</button></td>
                                         <td><button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#subirObservacionE">Calificar</button></td>
                                         <td>Falta calificación</td>
-                                        <td><button class="btn btn-warning">
-                                                <div class="form-group">
-
-                                                    <div class="form-group my-2">
-
-                                                        <div class="btn btn-default btn-file">
-
-                                                            <i class="fas fa-paperclip"></i> Adjuntar archivo
-
-                                                            <input type="file" name="subirArchivo" accept=".pdf">
-
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        <td>
+                                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#crearObservacion">
+                                                Nueva observación
                                             </button>
                                         </td>
                                     </tr>
@@ -123,20 +88,8 @@ if (($admin["fk_rol"] != 1) || ($admin["fk_rol"] != 3) || ($admin["fk_rol"] != 4
                                         <td><button class="btn btn-success">Descargar archivo</button></td>
                                         <td><button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#subirObservacionF">Calificar</button></td>
                                         <td>Falta calificación</td>
-                                        <td><button class="btn btn-warning">
-                                                <div class="form-group">
-
-                                                    <div class="form-group my-2">
-
-                                                        <div class="btn btn-default btn-file">
-
-                                                            <i class="fas fa-paperclip"></i> Adjuntar archivo
-
-                                                            <input type="file" name="subirArchivo" accept=".pdf">
-
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        <td> <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#crearObservacion">
+                                                Nueva observación
                                             </button>
                                         </td>
                                     </tr>
@@ -146,20 +99,8 @@ if (($admin["fk_rol"] != 1) || ($admin["fk_rol"] != 3) || ($admin["fk_rol"] != 4
                                         <td><button class="btn btn-success">Descargar archivo</button></td>
                                         <td><button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#subirObservacionG">Calificar</button></td>
                                         <td>Falta calificación</td>
-                                        <td><button class="btn btn-warning">
-                                                <div class="form-group">
-
-                                                    <div class="form-group my-2">
-
-                                                        <div class="btn btn-default btn-file">
-
-                                                            <i class="fas fa-paperclip"></i> Adjuntar archivo
-
-                                                            <input type="file" name="subirArchivo" accept=".pdf">
-
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        <td> <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#crearObservacion">
+                                                Nueva observación
                                             </button>
                                         </td>
                                     </tr>
@@ -169,21 +110,8 @@ if (($admin["fk_rol"] != 1) || ($admin["fk_rol"] != 3) || ($admin["fk_rol"] != 4
                                         <td><button class="btn btn-success">Descargar archivo</button></td>
                                         <td><button class="btn btn-primary">Calificado</button></td>
                                         <td>95</td>
-                                        <td><button class="btn btn-warning">
-                                                <div class="form-group">
-
-                                                    <div class="form-group my-2">
-
-                                                        <div class="btn btn-default btn-file">
-
-                                                            <i class="fas fa-paperclip"></i> Adjuntar archivo
-
-                                                            <input type="file" name="subirArchivo" accept=".pdf">
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </button>
+                                        <td>
+                                            <p>Observación guardada</p>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -894,6 +822,36 @@ if (($admin["fk_rol"] != 1) || ($admin["fk_rol"] != 3) || ($admin["fk_rol"] != 4
                     <div class="row input-group">
                         <span>Total: <strong>--</strong></span>
                     </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Ventana modal subir observacion -->
+<div class="modal fade" id="crearObservacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="" method="POST">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="staticBackdropLabel">Subir nueva observación</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- preguntas sobre el cumplimiento de la publicación -->
+                    <div class="row input-group-text">
+                        <div class="form-group">
+                            <p>Escriba su observación:</p>
+
+                            <textarea class="p" name="escribirObservacion" cols="50" rows="10"></textarea>
+
+                        </div>
+                    </div>
+                    <p><b>Nota: </b><i>En esta versión la observación no se podrá modificar</i></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
