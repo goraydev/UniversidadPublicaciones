@@ -7,6 +7,7 @@ $rutaBackend = ControladorRuta::ctrRutaBackend();
 if (isset($_SESSION["idBackend"])) {
     $admin = ControladorAdministradores::ctrMostrarIngreso("idcuenta", $_SESSION["idBackend"]);
     $docente = ControladorAdministradores::ctrMostrarIngresoDocente("idcuenta", $_SESSION["idBackend"]);
+    $ingresante = ControladorAdministradores::ctrMostrarCargo("idcuenta", $_SESSION["idBackend"]);
 }
 ?>
 

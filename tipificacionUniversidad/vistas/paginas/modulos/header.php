@@ -4,6 +4,9 @@
         <li class="nav-item">
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
+        <li>
+            <a class="nav-link"><?php echo $ingresante["tipo"] ?></a>
+        </li>
     </ul>
 
     <!-- las notificaciones -->

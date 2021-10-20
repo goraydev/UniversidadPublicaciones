@@ -1,9 +1,17 @@
 <!-- Para evitar el ingreso a esta página mediante la URL -->
 <?php
+
+require "conexion.php";
+$sql = "SELECT * FROM v_cuentasper WHERE fk_rol NOT IN(1,4)";
+$resultado = $mysqli->query($sql);
+
+
 if ($admin["fk_rol"] != 1) {
     echo '<script> window.location = "inicio" </script>';
     return;
 }
+
+
 ?>
 <div class="content-wrapper" style="min-height: 1761.5px;">
     <!-- Content Header (Page header) -->
@@ -37,58 +45,31 @@ if ($admin["fk_rol"] != 1) {
                             <table class="table table-bordered table-striped dt-responsive tablaResultados" width="100%" id="TablaResultados">
                                 <thead>
                                     <tr>
+                                        <th>Código</th>
                                         <th>Docente</th>
-                                        <th>Estado</th>
                                         <th>Cargo</th>
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody id="myTable">
-                                    <tr>
-                                        <td>Mario Ninaquispe</td>
-                                        <td><button class="btn btn-success">Activo</button></td>
-                                        <td><button class="btn btn-warning">Presidente</button></td>
-                                        <td>
-                                            <div class="btn-group" role="group">
-                                                <button type="button" class="btn btn-primary"><i class="fas fa-edit"></i></button>
-                                                <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                            </div>
-                                        </td>
+                                    <?php
+                                    while ($row = $resultado->fetch_array(MYSQLI_ASSOC)) { ?>
+                                        <tr>
+                                            <td><?php echo $row['codidentificacion'] ?></td>
+                                            <td><?php echo $row['Personas'] ?></td>
+                                            <td><?php if ($row['fk_rol'] != 3) {
+                                                    echo "<button class='btn btn-warning btn-sm'>" . $row['tipo'] . "</button>";
+                                                } else {
+                                                    echo "<button class='btn btn-secondary btn-sm'>" .  $row['tipo'] . "</button>";
+                                                } ?></td>
+                                            <td>
+                                                <button class='btn btn-primary btn-sm'><a href="modificarCuenta.php?codIdentificacion=<?php echo $row['codidentificacion']; ?>"><i class="far fa-edit text-white"></i></a></button>
+                                            </td>
 
-                                    </tr>
-                                    <tr>
-                                        <td>Robby Lugo Vargas</td>
-                                        <td><button class="btn btn-success">Activo</button></td>
-                                        <td><button class="btn btn-warning">Secretario</button></td>
-                                        <td>
-                                            <div class="btn-group" role="group">
-                                                <button type="button" class="btn btn-primary"><i class="fas fa-edit"></i></button>
-                                                <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Coral villanueva</td>
-                                        <td><button class="btn btn-success">Activo</button></td>
-                                        <td><button class="btn btn-warning">Vocal</button></td>
-                                        <td>
-                                            <div class="btn-group" role="group">
-                                                <button type="button" class="btn btn-primary"><i class="fas fa-edit"></i></button>
-                                                <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Miguel Silva Zapata</td>
-                                        <td><button class="btn btn-secondary">Desactivado</button></td>
-                                        <td><button class="btn btn-dark">Ninguno</button></td>
-                                        <td>
-                                            <div class="btn-group" role="group">
-                                                <button type="button" class="btn btn-primary"><i class="fas fa-edit"></i></button>
-                                                <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>
